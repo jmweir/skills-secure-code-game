@@ -30,10 +30,10 @@ int userid_next = 0;
 // The following structure is implementation-speicific and it's supposed to be unknown 
 // to non-privileged users
 typedef struct {
+    long setting[SETTINGS_COUNT];
     bool isAdmin;
     long userid;
     char username[MAX_USERNAME_LEN + 1];
-    long setting[SETTINGS_COUNT];
 } user_account;
 
 // Simulates an internal store of active user accounts
